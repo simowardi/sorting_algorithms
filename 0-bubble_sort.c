@@ -1,9 +1,10 @@
 #include "sort.h"
+#include <stdbool.h>
 
 /**
- * swapIntegers - Swap two integers in an array.
- * @x: The first integer to swap.
- * @y: The second integer to swap.
+ * swapIntegers - Swap two integers in an array
+ * @x: The first integer to swap
+ * @y: The second integer to swap
  */
 void swapIntegers(int *x, int *y)
 {
@@ -15,34 +16,35 @@ void swapIntegers(int *x, int *y)
 }
 
 /**
- * bubbleSort - Sort an array of integers in ascending order.
- * @arr: An array of integers to sort.
- * @size: The size of the array.
- *
- * Description: Prints the array after each swap.
+ * bubbleSort - Sorts an array of integers in ascending order
+ * @arr: Array of integers to sort
+ * @size: Size of the array
  */
 void bubbleSort(int *arr, size_t size)
 {
-	size_t idx, length = size;
+	size_t idx = 0, j;
 	bool sorted = false;
 
 	if (arr == NULL || size < 2)
 		return;
 
-	while (sorted == false)
+	while (idx < size - 1)
 	{
 		sorted = true;
-		idx = 0;
-		while (idx < length - 1)
+		j = 0;
+		while (j < size - idx - 1)
 		{
-			if (arr[idx] > arr[idx + 1])
+			if (arr[j] > arr[j + 1])
 			{
-				swapIntegers(arr + idx, arr + idx + 1);
+				swapIntegers(arr + j, arr + j + 1);
 				printArray(arr, size);
 				sorted = false;
 			}
-			idx++;
+			j++;
 		}
-		length--;
+		if (sorted)
+			break;
+		idx++;
 	}
 }
+
