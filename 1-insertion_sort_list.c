@@ -22,11 +22,11 @@ void swapNodesCustom(listint_t **listHead, listint_t **nodeA, listint_t *nodeB)
 }
 
 /**
- * insertionSortList - Sorts a doubly linked list
+ * insertion_sort_list - Sorts a doubly linked list
  *                          of integers in ascending order
  * @list: A pointer to the head of a doubly linked list of int
  */
-void insertionSortList(listint_t **list)
+void insertion_sort_list(listint_t **list)
 {
 	listint_t *node, *insert;
 
