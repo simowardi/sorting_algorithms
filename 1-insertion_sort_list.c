@@ -39,7 +39,7 @@ void insertionSortList(listint_t **list)
 		insert = node->prev;
 		while (insert != NULL && node->n < insert->n)
 		{
-			swapNodes(list, &insert, node);
+			swapNodesCustom(list, &insert, node);
 			print_list((const listint_t *)*list);
 			insert = node->prev;
 		}
