@@ -16,35 +16,31 @@ void swapIntegers(int *x, int *y)
 }
 
 /**
- * bubbleSort - Sorts an array of integers in ascending order
- * @arr: Array of integers to sort
- * @size: Size of the array
+ * bubble_sort - sorts an array of integers in ascending order
+ * @array: array of integers to sort
+ * @size: size of the array
  */
-void bubbleSort(int *arr, size_t size)
+void bubble_sort(int *array, size_t size)
 {
-	size_t idx = 0, j;
-	bool sorted = false;
+	size_t n1, n2;
+	bool bubblesort = false;
 
-	if (arr == NULL || size < 2)
+	if (array == NULL || size < 2)
 		return;
 
-	while (idx < size - 1)
+	for (n1 = 0; n1 < size - 1; n1++)
 	{
-		sorted = true;
-		j = 0;
-		while (j < size - idx - 1)
+		bubblesort = true;
+		for (n2 = 0; n2 < size - n1 - 1; n2++)
 		{
-			if (arr[j] > arr[j + 1])
+			if (array[n2] > array[n2 + 1])
 			{
-				swapIntegers(arr + j, arr + j + 1);
-				printArray(arr, size);
-				sorted = false;
+				swapint(array + n2, array + n2 + 1);
+				print_array(array, size);
+				bubblesort = false;
 			}
-			j++;
 		}
-		if (sorted)
+		if (bubblesort)
 			break;
-		idx++;
-	}
+			}
 }
-
