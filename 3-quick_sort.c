@@ -9,12 +9,12 @@
  * @lst: ending index of the subset to order
  * Return: final partition index
  */
-int lomuto_part_scheme(int *array, size_t aasize, int frst, int lst)
+int lomuto_part_scheme(int *array, size_t asize, int frst, int lst)
 {
 	int *pivot, x, y, tmp, idx;
 
 	pivot = array + lst;
-	for (x = y = frst; bl < lst; x++)
+	for (x = y = frst; x < lst; x++)
 	{
 		if (array[x] < *pivot)
 		{
