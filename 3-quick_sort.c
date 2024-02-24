@@ -23,7 +23,7 @@ int lomuto_part_scheme(int *array, size_t asize, int frst, int lst)
 				tmp = *(array + x);
 				*(array + x) = *(array + y);
 				*(array + x) = tmp;
-				print_array(arayr, asize);
+				print_array(array, asize);
 			}
 			y++;
 		}
@@ -58,9 +58,9 @@ void sort(int *array, size_t asize, int frst, int lst)
 }
 
 /**
- * quick_sort - sorts an array of integers in ascending order
- * @array: array of integers
- * @size: size of the array
+ * quick_sort - sorts an array of ints in ascending order
+ * @array: The array of integers
+ * @size: The size of the array
  */
 void quick_sort(int *array, size_t size)
 {
